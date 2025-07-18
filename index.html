@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Fruit Slice Master</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Phaser -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Fruit Slice Master</h1>
+        <div class="ad-banner top-ad">[Top Banner Ad]</div>
+        <button id="play-btn">Play</button>
+        <div class="ad-banner bottom-ad">[Bottom Banner Ad]</div>
+    </div>
+
+    <!-- Game Canvas -->
+    <div id="game-container" style="display:none;">
+        <div class="ad-banner game-ad">[In-Game Banner Ad]</div>
+        <div id="phaser-game"></div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over" style="display:none;">
+        <h2>Game Over</h2>
+        <p id="final-score">Score: 0</p>
+        <button id="replay-btn">Replay</button>
+        <button id="home-btn">Home</button>
+    </div>
+
+    <!-- Telegram Buttons -->
+    <div id="telegram-buttons">
+        <button onclick="Telegram.WebApp.close()">Close Game</button>
+        <button onclick="Telegram.WebApp.openTelegramLink('https://t.me/YOUR_BOT_USERNAME')">Back to Bot</button>
+        <button onclick="Telegram.WebApp.addToHomeScreen()">Add to Home Screen</button>
+    </div>
+
+    <!-- Game Logic -->
+    <script src="game.js"></script>
+
+    <!-- Insert Interstitial Ad Script Here -->
+</body>
+</html>
